@@ -34,7 +34,7 @@ with st.sidebar:
     if mode == "General Chat":
         persona = st.text_area(
             "System / Persona",
-            value="You are a concise, helpful assistant.",
+            value="You are an expert physician with 20 years in the field",
             height=120,
         )
         temp = st.slider("Creativity (temperature)", 0.0, 2.0, 0.7, 0.1)
@@ -64,10 +64,11 @@ with st.sidebar:
 
 # ---------- Header / Banner ----------
 if mode == "ER Pre-Op Assistant (SIM)":
-    st.title("🏥 ER Pre-Op Assistant (Simulation)")
+    st.title("🏥 ER Pre-Op Assistant")
     st.warning("SIMULATION ONLY • Do not use with real patient data • Not medical advice.")
 else:
-    st.title("🤖 *Insert cool name here*")
+    st.title("PocketDoc")
+    st.warning("SIMULATION ONLY • Not medical advice.")
 
 # ---------- Knowledge Base (ER mode): Upload & Embed ----------
 KB_TEXTS: List[str] = []
@@ -149,7 +150,7 @@ if mode == "ER Pre-Op Assistant (SIM)":
 # ---------- Chat history ----------
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "model", "content": "Hi! I'm the coolest LLM around. What's up?"}
+        {"role": "model", "content": "Hi! How can I assist you today?"}
     ]
 
 # Render history
