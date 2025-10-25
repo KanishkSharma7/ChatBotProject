@@ -22,7 +22,7 @@ client = genai.Client()  # picks up GEMINI_API_KEY automatically
 MODEL_NAME = "gemini-2.5-flash"  # fast + free-tier friendly
 EMBED_MODEL = "text-embedding-004"
 
-st.set_page_config(page_title="ER Pre-Op Assistant (SIM) + Chat", page_icon="🤖")
+st.set_page_config(page_title="Surgio", page_icon="🧑‍⚕️")
 
 # ---------- Sidebar: Modes & Controls ----------
 with st.sidebar:
