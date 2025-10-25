@@ -12,7 +12,8 @@ from google.genai import types
 # RAG helpers
 import numpy as np
 import pandas as pd
-from PyPDF2 import PdfReader
+# from PyPDF2 import PdfReader
+from pypdf import PdfReader
 
 # ---------- Setup ----------
 load_dotenv()  # loads GEMINI_API_KEY from .env (if present)
